@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,63 +8,15 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/city_field"
+        android:id="@+id/txtLocation"
         android:layout_width="146dp"
         android:layout_height="62dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:textColor="#FFFFFF"
-        android:textSize="28sp"/>
+        android:textSize="28sp"
+        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/weather_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"
-        android:textSize="90sp"
-        android:layout_above="@+id/current_temperature_field"/>
 
-    <TextView
-        android:id="@+id/current_temperature_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textColor="#FFFFFF"
-        android:textSize="72sp" />
 
-    <TextView
-        android:id="@+id/humidity_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/current_temperature_field"
-        android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"/>
-
-    <TextView
-        android:id="@+id/pressure_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/humidity_field"
-        android:layout_centerInParent="true"
-        android:textColor="#FFFFFF"/>
-
-    <TextView
-        android:id="@+id/details_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/pressure_field"
-        android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"/>
-
-    <TextView
-        android:id="@+id/updated_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp"/>
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
