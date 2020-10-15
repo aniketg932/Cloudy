@@ -23,7 +23,7 @@ import com.google.gson.reflect.TypeToken
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(),GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener, LocationListener {
+class MainActivity : AppCompatActivity(),GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener,LocationListener {
     val PERMISSION_REQUEST_CODE = 1001
     val PLAY_SERVICE_RESOLUTION_REQUEST = 1000
     var mGoogleApiClient: GoogleApiClient? = null
@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity(),GoogleApiClient.ConnectionCallbacks,Goo
         requestPermissions();
         if(checkplayService())
             buildGoogleApiClient()
-
     }
 
     private fun requestPermissions() {
@@ -146,7 +145,7 @@ class MainActivity : AppCompatActivity(),GoogleApiClient.ConnectionCallbacks,Goo
     }
 
     override fun onLocationChanged(location: Location?) {
-        GetWeather().execute(com.example.cloudy.Common.location.apiRequest(location!!.latitude.toString(),location.longitude!!.toString()))
+        GetWeather().execute(com.example.cloudy.Common.location.apiRequest(location!!.latitude.toString(),location!!.longitude.toString()))
     }
 
     override fun onStart() {
@@ -165,6 +164,7 @@ class MainActivity : AppCompatActivity(),GoogleApiClient.ConnectionCallbacks,Goo
         checkplayService()
     }
 
+    @Suppress("DEPRECATION")
     private inner class GetWeather: AsyncTask<String, Void, String>()
     {
         internal var pd= ProgressDialog(this@MainActivity)
@@ -175,11 +175,11 @@ class MainActivity : AppCompatActivity(),GoogleApiClient.ConnectionCallbacks,Goo
         }
 
         override fun doInBackground(vararg params: String?): String {
-            var stream: String? = null
-            var urlString = params[0]
+            var stream: String?
+            var urlString=params[0]
 
             var http = com.example.cloudy.Common.Helper()
-            stream=http.getHTTPData(urlString)
+            stream = http.getHTTPData(urlString)
             return stream
         }
 
@@ -204,7 +204,6 @@ class MainActivity : AppCompatActivity(),GoogleApiClient.ConnectionCallbacks,Goo
             Picasso.with(this@MainActivity)
                 .load(location.getImage(openWeatherMap.weather!![0].icon!!))
                 .into(imageView)
-
          }
 
     }

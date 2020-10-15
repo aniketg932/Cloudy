@@ -6,7 +6,7 @@ import java.util.*
 
 object location {
     val  API_KEY="3c18c5a77fa131312dbdb5974c055e67"
-    val API_LINK="http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139"
+    val API_LINK="http://api.openweathermap.org/data/2.5/weather"
 
     fun apiRequest(lat:String,lng:String):String {
          var sb= StringBuilder(API_LINK)
