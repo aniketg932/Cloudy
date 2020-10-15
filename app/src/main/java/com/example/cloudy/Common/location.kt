@@ -1,6 +1,5 @@
-package com.example.cloudy.location
+package com.example.cloudy.Common
 
-import android.graphics.drawable.Icon
 import java.lang.StringBuilder
 import java.text.SimpleDateFormat
 import java.util.*

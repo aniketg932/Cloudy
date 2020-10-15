@@ -1,4 +1,4 @@
-package com.example.cloudy.location;
+package com.example.cloudy.Common;
 
 import java.io.BufferedReader;
 import java.io.IOException;

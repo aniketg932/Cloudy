@@ -1,4 +1,6 @@
 package com.example.cloudy.Model
 
-class Cloouds(var all:Int)
+class Cloouds(var all:Int) {
+
+}
 

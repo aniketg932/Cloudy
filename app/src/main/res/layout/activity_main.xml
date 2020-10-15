@@ -1,22 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
+    android:orientation="vertical"
     tools:context=".activ.MainActivity">
 
+     <TextView
+         android:id="@+id/txtcity"
+         android:layout_marginTop="40dp"
+         android:text=""
+         android:textSize="32sp"
+         android:textStyle="bold"
+         android:gravity="center"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent" />
+
     <TextView
-        android:id="@+id/txtLocation"
-        android:layout_width="146dp"
-        android:layout_height="62dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/txtLastUpdate"
         android:layout_marginTop="40dp"
+        android:text=""
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:text=""
         android:textSize="28sp"
-        tools:ignore="MissingConstraints" />
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/txtHumidity"
+        android:text=""
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:text=""
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/txtCelsius"
+        android:text=""
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
